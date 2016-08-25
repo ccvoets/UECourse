@@ -19,11 +19,11 @@ UOpenDoor::UOpenDoor()
 // Called when the game starts
 void UOpenDoor::BeginPlay()
 {
-
+	
 	//Find Owning Actor
 	AActor* Owner = GetOwner();
 	//Create rotator 
-	FRotator NewRotation = FRotator(0.f, -60.f, 0.f);
+	FRotator NewRotation = FRotator(0.f, OpenAngle, 0.f);
 	//Set Rotation
 	Super::BeginPlay();
 	Owner->SetActorRotation(NewRotation);
