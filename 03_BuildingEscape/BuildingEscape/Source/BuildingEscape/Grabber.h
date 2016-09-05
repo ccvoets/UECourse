@@ -24,5 +24,12 @@ public:
 		
 private:
 	UPROPERTY(EditAnywhere)
+		AActor* TargetActor;
+	
+	UPROPERTY(EditAnywhere) //how Far ahead to raycast
+		float Reach = 100.f;
+		
+	
+		
 
 };
