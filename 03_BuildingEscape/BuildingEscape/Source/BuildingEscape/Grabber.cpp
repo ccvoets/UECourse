@@ -41,7 +41,7 @@ void UGrabber::TickComponent( float DeltaTime, ELevelTick TickType, FActorCompon
 	);
 	//log out to test
 	//Draw Red Trace in World To Visualize
-	FVector LineTraceEnd = PlayerViewPointLocation + PlayerViewPointRotation.Vector() * Reach ;
+		FVector LineTraceEnd = PlayerViewPointLocation + PlayerViewPointRotation.Vector() * Reach ;
 	DrawDebugLine(
 		GetWorld(),
 		PlayerViewPointLocation,
@@ -51,12 +51,12 @@ void UGrabber::TickComponent( float DeltaTime, ELevelTick TickType, FActorCompon
 		0.f,
 		0.f,
 		50.f
-	);
+	); 
 	/*UE_LOG(LogTemp, Warning, TEXT("SuperCow: %s, RotationMoo: %s"), *PlayerViewPointLocation.ToString(),*PlayerViewPointRotation.ToString());*/
 
 	//setup query params
 	FCollisionQueryParams TraceParameters(FName(TEXT("")), false, GetOwner()); //template for starting simple traces 
-	///ray cast out to reach distance (private variable) 
+	///ray cast out to reach distance which is editable with reach, editable from within UE 
 	FHitResult Hit;
 	
 	GetWorld()->LineTraceSingleByObjectType(
@@ -76,7 +76,7 @@ void UGrabber::TickComponent( float DeltaTime, ELevelTick TickType, FActorCompon
 	//Get hit report
 
 	//moo some too
-	//wtf is wrong with you
+	
 	
 }
 

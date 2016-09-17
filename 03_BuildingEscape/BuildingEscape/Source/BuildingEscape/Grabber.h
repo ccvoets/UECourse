@@ -27,7 +27,7 @@ private:
 		AActor* TargetActor;
 	
 	UPROPERTY(EditAnywhere) //how Far ahead to raycast
-		float Reach = 100.f;
+		float Reach = 200.f;
 		
 	
 		
